@@ -1,0 +1,9 @@
+
+a.When should you use LinkedList over ArrayList?
+
+
+Answer:
+
+        LinkedList should be used where modifications to a collection are frequent like addition/deletion operations.
+        LinkedList is much faster as compared to ArrayList in such cases.
+        In case of read-only collections or collections which are rarely modified, ArrayList is suitable.

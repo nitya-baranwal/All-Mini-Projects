@@ -1,0 +1,17 @@
+2.What do you understand by “Java Strings are immutable”.
+  Explain the advantages and disadvantages of immutability of
+  Strings.
+
+Answer:
+        Strings are immutable because if we change string value of one reference variable,
+        it will change for all the other reference variables pointing to the same reference.
+        For example, let us suppose ther are 3 variables which refer to same string value "Nitya",
+        If one reference variable changes the value in the reference, it will get changed for the other reference variables.
+        That is why String objects are immutable in java.
+
+        Advantages of immutability:
+        1. It provides more security than to lose data.
+        2. Immutable strings are cheap to copy, because it can directly copy a reference or pointer to the data.
+
+        Disadvantage of immutability:
+        1. This cause to consume lot of memory by creating different object for distinct strings.

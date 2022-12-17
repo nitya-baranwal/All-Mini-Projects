@@ -1,0 +1,11 @@
+1. Explain the four pillars of object-oriented programming.
+
+Answer: The fours pillars of OOP are:
+
+        1. Encapsulation: Like in capsule, we can keep variables, data and methods together inside a class.
+
+        2. Abstraction :  It is used to hide method inside class, and only allowing user to use its functionality.
+
+        3. Inheritance : This is used to inherit properties of a class by another class.
+
+        4. Polymorphism: The same method can have different behaviour for different classes.

@@ -1,0 +1,22 @@
+Q.4
+a. What are the benefits of using an abstract method?
+b. Explain with an appropriate code example.
+
+
+Answer :
+
+When we require just method declaration in super-classes, this can be achieved
+by specifying the abstract type modifier.
+They have no implementation specified in the super-class. Thus, a subclass
+must override them to provide method definition. To declare an abstract method, use this general
+form:
+
+      abstract type method-name(parameter-list);
+
+As we can see, no method body is present. Any concrete class(i.e. class without
+abstract keyword) that extends an abstract class must override all the abstract methods
+of the class.
+The sub(or child) class which extends the abstract class and overrides the abstract method may contain
+concrete methods but it is absolutely necessary to override the abstract method of the super(or parent) class.
+
+This has been explained with an appropriate code example in class "A4" with child class "ChildOfA4".

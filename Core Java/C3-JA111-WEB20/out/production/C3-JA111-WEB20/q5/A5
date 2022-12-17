@@ -1,0 +1,20 @@
+
+Answer:
+
+As we know that to a parent class variable we can assign the child class object also,
+and from that parent class variable if we try to call any overridden method then due to
+Runtime polymorphism the overridden method will be called.
+
+If a parent class reference points to a child class object, with that parent class reference we can not call
+the child class specific methods, which are not available inside the parent class.
+
+"To call the child class specific method from the parent class reference variable, we need
+to downcast the parent class variable to the appropriate child class object."
+
+We can downcast the parent class variable to the child class object only if the Parent class
+variable points to the Child class object , otherwise it will throw a runtime exception
+called ClassCastException.
+
+
+The above explanation has been explained with an appropriate code example with super (or parent) class 'Animal'
+ and sub (or child) class 'Dog'.

@@ -1,0 +1,7 @@
+
+
+b.When should you use ca Set over a List?
+
+Answer:
+    The main difference between List and Set is that List allows duplicates
+    while Set doesn't allow duplicates.

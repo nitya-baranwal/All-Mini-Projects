@@ -1,0 +1,48 @@
+
+
+d.What is the difference between throw and throws. Write the code
+  for the same.
+
+  Answer:
+          Following points are the main differences between "throw" and "throws":
+
+          1."Throw" is a keyword which is used to throw an exception
+            explicitly in the program inside a function or inside a block of code.
+
+                    e.g.public class DemoThrow{
+                           public void checkAge(int age){
+                              if(age<18)
+                                 throw new ArithmeticException("Not Eligible for voting");
+                              else
+                                 System.out.println("Eligible for voting");
+                           }
+                           public static void main(String args[]){
+                              DemoThrow obj = new DemoThrow();
+                              obj.checkAge(13);
+                              System.out.println("End Of Program");
+                           }
+                        }
+            whereas
+            "Throws" is a keyword used in the method signature used to declare
+            an exception which might get thrown by the function while executing the code.
+
+                    e.g.public class ThrowsClass{
+                           public int division(int a, int b) throws ArithmeticException{
+                              int t = a/b;
+                              return t;
+                           }
+                           public static void main(String args[]){
+                              ThrowsClass obj = new ThrowsClass();
+                              try{
+                                 System.out.println(obj.division(15,0));
+                              }
+                              catch(ArithmeticException e){
+                                 System.out.println("You shouldn't divide number by zero");
+                              }
+                           }
+                        }
+
+          2.With "throw" keyword we can propagate only unchecked exception
+            i.e checked exception cannot be propagated using throw.
+            whereas
+            On other hand, "throws" keyword handles both checked and unchecked exceptions.

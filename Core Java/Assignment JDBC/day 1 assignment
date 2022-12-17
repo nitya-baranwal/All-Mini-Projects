@@ -1,0 +1,173 @@
+Q1/- What is the requirement of Java Database communication?
+
+
+A1/-
+
+
+RDBMS are excellent in data storage in a secure and easily retrieval manner, but it is very
+poor in processing and presenting the data in user-understandable format.
+
+Java is excellent in processing the data and presenting the data, but poor in storing the data
+(In Java, we can store the business data permanently using Serialization and Files).
+
+So, in order to develop a powerful business application, we need to
+communicate our Java Application with the DB server.
+
+
+
+Q2/- What is JDBC, Write a note on JDBC driver software.
+
+
+A/-
+
+--Java App can do any task only through the method calls and objects, 
+these method calls and object are not directly understandable to the DB s/w.
+
+--DB s/w can understands only sql, Java Compiler does not accept the sql syntax directly.
+
+--Inspite of hetergenious platform Java-DB communication is possible through the JDBC.
+
+
+Chinese ------translator-----------Russian 
+
+Java -------- Jdbc driver s/w -----------------DB s/w
+
+
+
+JDBC is a technology that enables any kind of Java application to communicate with any kind of DB s/w in a standard manner.
+
+
+Jdbc technology is given by Sun-microsystem(Oracle Corp)
+
+
+JDBC technology comes in the form of a specification (It is a documentation which describes rules and guidelines to develop a perticular s/w : "jdbc driver s/w").
+
+
+--JDBC driver s/w is the implementation of the JDBC specification, which will act as a translator s/w to communicate Java App with the DB s/w.
+
+--Each DB s/w have their own JDBC driver s/w, so DB vendor will implement the 
+JDBC specification and they develop the JDBC driver s/w.
+
+--these driver s/w comes in the form of a .jar file.
+
+
+Mysql:   mysql-connector.jar
+
+Oracle : ojdbc6.jar
+
+Postgres : postgress.jar
+
+--all the jdbc driver s/w is developed according the the same JDBC specification.
+
+nityaDB:         Java Developer 
+
+driver for nityaDB: 
+
+nityadb.jar 
+
+MyClass.getconn()
+submit(sql)
+getData() 
+
+--if we develop the ratandb.jar (driver s/w according to the JDBC specification)
+then any Java developer can communicate with the our DB s/w in a standard manner.
+
+
+JDBC driver:
+==========
+
+--it is a translation s/w written in Java according to the Jdbc Specification
+(it comes in the form of .jar file)
+
+Responsibility of Jdbc Driver :
+=======================
+
+1. establishing the connection.
+
+2. receiving the jdbc method calls (java method call) and translate them
+into the DB understandable format (sql) and forward them to the DB server.
+
+3. Translating the DB s/w given result in the the Java format (Java objects) and returns that object to the JDBC client.
+
+
+
+
+Q3/- Write a Jdbc application to establish the connection with the Mysql database.
+
+Java Application {
+
+classes 
+methods 
+interface 
+
+}
+
+--compile all the .java files -----> .class files ----> zip all the .class files inside a .jar file
+
+
+ratanapp {
+A.java
+B.java
+Demo.java
+} // after compilation and creating a jar files (a1.jar)
+
+
+
+class X{ // here we need to set a1.jar file in the classpath of our application 
+	// then only the jar file related classes will available inside this class
+main(){
+A a1= new A();
+
+
+}
+
+}
+
+
+
+--in order to communicate our Java application with the DB server, Java
+developer need to get/download Jdbc driver s/w and need to add the jdbc driver related 
+jar file in the classpath of our application.
+
+
+
+--In order to communicate our java appplication with the DB server, Java Developer needs 2 things:
+
+1.JDBC driver related jar file
+
+2.jdbc API (this api comes in the form of following 2 packages):
+
+1.java.sql
+2.javax.sql
+
+--this JDBC API contains all the library classes, interfaces using which we can communicate our java application with the DB server.
+
+Note: Jdbc API comes along with the JDK installation.
+
+
+Q4/- Write down the responsibilities of the Jdbc Client.
+
+JDBC client:
+==========
+
+--In Java DB communication, our Java application will act as a client becoz Java application needs the services of DB server. so our Java app is a Jdbc client.
+
+
+Responsibility of the JDBC client:
+===========================
+
+1. Reqesting the DB connection.
+
+2. Submitting the appropriate SQL statement to the DB server in the form of String object.
+
+3. Processing the result given by the DB server.
+
+4. Dealing with exceptions if any.
+
+5. Manging the transactions whenever it is required.
+
+6. closing the connection once done with the DB operation.
+
+
+
+

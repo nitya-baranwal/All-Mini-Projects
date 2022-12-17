@@ -1,0 +1,14 @@
+Answer:
+
+Upcasting:
+
+During the Runtime polymorphism process, in which a call to an overridden method is resolved at runtime
+rather than compile-time.
+In this process, an overridden method is called through the reference variable of a
+superclass. The method to be called is based on the object being referred to by the reference variable.
+
+If the reference variable of Parent class refers to the object of Child class, it is known as
+upcasting.
+
+The above explanation has been explained with an appropriate code example with super(or parent) class 'Animal
+and sub(or child class) 'Dog'.

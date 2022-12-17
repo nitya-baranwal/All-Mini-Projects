@@ -1,0 +1,63 @@
+
+
+c. What is the difference between final and finally. Write the code for the same.
+
+  Answer:
+        Following points are the main differences between "final" and "finally":
+
+        1.  Final is a "Keyword" and "access modifier" in Java.
+            whereas Finally is a "block" in Java.
+        2.Applicability: Final is a keyword applicable to classes, variables and methods.
+            Finally is a block that is always associated with try and catch block.
+        3.Working: (1)  Final variable becomes constant, and it can't be reassigned.
+
+                                   e.g. final int FILE_OPEN = 2;
+
+
+                   (2)   A final method can't be overridden by the child class.
+
+                                   e.g. class A {
+                                        final void method() {
+                                        System.out.println("This is a final method.");
+                                        }
+                                        }
+                                        class B extends A {
+                                        void method() {         //Clas B can not inherit the method of class A.
+                                        System.out.println("Does not override");
+                                        }
+                                        }
+
+
+
+                   (3) Final Class can not be extended.
+
+                                   e.g. final class A {
+                                               A(){
+                                                    System.out.println("This is a final class");
+                                               }
+                                        }
+                                        class B extends A { // Class B can not inherit class A
+                                               B(){
+                                                    System.out.println("Final class cannot be inherited");
+                                               }
+                                        }
+
+                   whereas
+                   A "finally" block, clean up the resources used in "try" block.
+
+
+                       e.g. class FinallyExample {
+                            // This method throw an exception out of the method.
+                            static void NewClass() {
+                                try {
+                                    System.out.println("inside NewClass");
+                                    throw new RuntimeException("demo");
+                                } finally {
+                                    System.out.println("NewClass's finally");
+                                }
+                            }
+
+
+        4.Execution: Final method is executed upon its call.
+                    whereas
+                    "Finally" block executes just after the execution of"try-catch" block.

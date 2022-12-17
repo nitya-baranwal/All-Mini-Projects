@@ -1,0 +1,9 @@
+2. Differentiate between JRE, JVM and JDK.
+
+Answer:
+
+        JRE(Java Runtime Environment): This is a platform where Java programs are run.
+                                       It could be different for different OS.
+        JVM(Java Virtual Machine): This is used to convert the java byte-code into OS machine code.
+        JDK(Java Development Kit): Java compiler comes with JDK.
+                                   JDK is used to develop and execute Java applications.
